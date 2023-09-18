@@ -1,0 +1,20 @@
+[package]
+name = "papak"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "papak-cli"
+path = "src/bin.rs"
+
+[lib]
+name = "papak"
+path = "src/lib.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+byteorder = "1"
+clap = { version = "4.4.3", features = ["derive"] }
+tabled = "0.14.0"
+flate2 = { version = "1.0.17", features = ["zlib-ng"], default-features = false }
